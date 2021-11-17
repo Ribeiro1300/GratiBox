@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import styled from "styled-components";
 
 export const Content = styled.div`
@@ -14,7 +15,6 @@ export const Content = styled.div`
   letter-spacing: 1.5px;
 
   a {
-    color: currentColor;
     text-decoration: none;
   }
 `;
@@ -36,10 +36,11 @@ export const PageText = styled.h3`
 
 export const LoginAndSignupInput = styled.input``;
 
-export const LoginAndSignupButton = styled.button``;
+export const LoginAndSignupButton = styled(Link)``;
 
-export const Button = styled.button`
-  width: 60%;
+export const Button = styled(Link)`
+  width: 40%;
+  height: 20px;
   background-color: #6d7ce4;
   border: none;
   border-radius: 8px;

@@ -1,6 +1,5 @@
 import * as G from "../../globalStyles/styles";
 import * as S from "./styles";
-import { Link } from "react-router-dom";
 import React from "react";
 
 export default function Home() {
@@ -14,12 +13,8 @@ export default function Home() {
         mais...
       </G.PageText>
       <S.HomeImg>
-        <Link to="/singup">
-          <G.Button>Quero Começar</G.Button>
-        </Link>
-        <Link to="/login">
-          <S.AlreadySignedIn>Já sou grato</S.AlreadySignedIn>
-        </Link>
+        <G.Button to="/signup">Quero Começar</G.Button>
+        <S.AlreadySignedIn to="/login">Já sou grato</S.AlreadySignedIn>
       </S.HomeImg>
     </G.Content>
   );
