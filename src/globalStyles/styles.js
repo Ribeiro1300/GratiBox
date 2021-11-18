@@ -21,7 +21,7 @@ export const PageTitle = styled.h2`
   font-size: 33px;
   color: #ffffff;
   font-weight: 600;
-  margin: 20px auto;
+  margin-bottom: 40px;
 `;
 
 export const PageText = styled.h3`
@@ -32,16 +32,39 @@ export const PageText = styled.h3`
   text-align: center;
 `;
 
-export const LoginAndSignupInput = styled.input``;
+export const LoginAndSignupInput = styled.input`
+  width: 90%;
+  height: 5em;
+  margin: 5px;
+  border-radius: 8px;
 
-export const LoginAndSignupButton = styled.button``;
+  ::placeholder {
+    padding-left: 10px;
+    font-size: 27px;
+    display: flex;
+    justify-content: center;
+  }
+`;
+
+export const LoginAndSignupButton = styled.button`
+  font-family: "Roboto", sans-serif;
+  font-size: 35px;
+  font-weight: 700;
+  width: 60%;
+  height: 55px;
+  background-color: #8692e3;
+  border: none;
+  border-radius: 8px;
+  color: #ffffff;
+  margin: 10px 0px;
+`;
 
 export const Button = styled.button`
   font-family: "Roboto", sans-serif;
   font-size: 18px;
   width: 40%;
   height: 40px;
-  background-color: #6d7ce4;
+  background-color: #8692e3;
   border: none;
   border-radius: 8px;
   color: #ffffff;
