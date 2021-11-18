@@ -27,7 +27,6 @@ export const PageTitle = styled.h2`
 `;
 
 export const PageText = styled.h3`
-  width: 90%;
   margin: 20px 0px;
   font-size: 18px;
   color: #ffffff;

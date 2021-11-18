@@ -21,11 +21,11 @@ export default function Subscription() {
   console.log(newPlan);
   return (
     <G.Content>
-      <G.PageTitle>Bom te ver por aqui, @fulaninhoDeTal</G.PageTitle>
+      <G.PageTitle>Bom te ver por aqui, {"@fulaninhoDeTal"}</G.PageTitle>
       {userId == "2" ? (
         <>
           <G.PageText>"Agradecer é arte de atrair coisas boas"</G.PageText>
-          <SubsInfo userInfo={mockUser}></SubsInfo>{" "}
+          <SubsInfo userInfo={mockUser}></SubsInfo>
           <G.Button>Avaliar Entregas</G.Button>
         </>
       ) : (
