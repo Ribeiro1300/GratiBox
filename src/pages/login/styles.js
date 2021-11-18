@@ -4,6 +4,7 @@ export const NotRegistered = styled.h3`
   color: #ffffff;
   margin-bottom: 40px;
   margin-top: 20px;
+  cursor: pointer;
 `;
 
 export const LoginWrapper = styled.div`

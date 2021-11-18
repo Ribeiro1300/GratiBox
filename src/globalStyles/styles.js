@@ -18,25 +18,28 @@ export const Content = styled.div`
 `;
 
 export const PageTitle = styled.h2`
-  font-size: 33px;
+  font-size: 30px;
   color: #ffffff;
   font-weight: 600;
+  margin-top: 30px;
   margin-bottom: 40px;
+  text-align: center;
 `;
 
 export const PageText = styled.h3`
-  width: 90%;
   margin: 20px 0px;
-  font-size: 19px;
+  font-size: 18px;
   color: #ffffff;
   text-align: center;
 `;
 
 export const LoginAndSignupInput = styled.input`
+  font-family: "Roboto", sans-serif;
   width: 90%;
-  height: 5em;
+  height: 70px;
   margin: 5px;
   border-radius: 8px;
+  font-size: 25px;
 
   ::placeholder {
     padding-left: 10px;
@@ -57,18 +60,21 @@ export const LoginAndSignupButton = styled.button`
   border-radius: 8px;
   color: #ffffff;
   margin: 10px 0px;
+  margin-top: 40px;
+  cursor: pointer;
 `;
 
 export const Button = styled.button`
   font-family: "Roboto", sans-serif;
-  font-size: 18px;
-  width: 40%;
-  height: 40px;
+  font-size: 23px;
+  width: 50%;
+  height: 50px;
   background-color: #8692e3;
   border: none;
   border-radius: 8px;
   color: #ffffff;
   margin: 10px 0px;
+  cursor: pointer;
 `;
 
 export const Input = styled.input``;

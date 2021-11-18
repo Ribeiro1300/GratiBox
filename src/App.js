@@ -1,4 +1,5 @@
 import { BrowserRouter, Switch, Route } from "react-router-dom";
+import "./assets/reset.css";
 import React from "react";
 import Signup from "./pages/signup/Signup";
 import Home from "./pages/home/Home";
@@ -18,8 +19,7 @@ function App() {
         <Route path="/signup">
           <Signup />
         </Route>
-
-        <Route path="/subscription/:userId">
+        <Route path="/subscription/:userId" exact>
           <Subscription />
         </Route>
       </Switch>
