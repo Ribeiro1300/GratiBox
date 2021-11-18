@@ -106,7 +106,7 @@ function Address(props) {
           placeholder="Estado"
         ></S.FormsInput>
       </S.Form>
-      <G.Button onClick={() => location.reload()}>Finalizar</G.Button>
+      <G.Button onClick={() => window.location.reload()}>Finalizar</G.Button>
     </>
   );
 }
