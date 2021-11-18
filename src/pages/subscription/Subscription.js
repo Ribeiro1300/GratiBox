@@ -2,14 +2,12 @@
 /* eslint-disable react/no-unescaped-entities */
 import { useParams } from "react-router-dom";
 import * as G from "../../globalStyles/styles";
-import * as S from "./styles";
-
 import SubsInfo from "../../components/SubsInfo";
-import React, { useState } from "react";
+import NewSubscription from "../../components/newSubscription/NewSubscription";
+import React from "react";
 
 export default function Subscription() {
   const { userId } = useParams();
-  const [newPlan, setNewPlan] = useState("");
   const mockUser = {
     id: userId,
     name: "Jhonatan",
@@ -18,7 +16,6 @@ export default function Subscription() {
     nextDeliveries: ["17/10/2010", "24/10/2010", "5/11/2010"],
     package: "Chás",
   };
-  console.log(newPlan);
   return (
     <G.Content>
       <G.PageTitle>Bom te ver por aqui, {"@fulaninhoDeTal"}</G.PageTitle>
@@ -33,22 +30,9 @@ export default function Subscription() {
           <G.PageText>
             Você ainda não assinou um plano, que tal começar agora?
           </G.PageText>
-          <ChoosePlan setNewPlan={setNewPlan} />
+          <NewSubscription />
         </>
       )}
     </G.Content>
-  );
-}
-
-function ChoosePlan({ setNewPlan }) {
-  return (
-    <>
-      <S.PlanWrapper src="month">
-        <G.Button onClick={() => setNewPlan("weekly")}>Assinar</G.Button>
-      </S.PlanWrapper>
-      <S.PlanWrapper src={"week"}>
-        <G.Button onClick={() => setNewPlan("monthly")}>Assinar</G.Button>
-      </S.PlanWrapper>
-    </>
   );
 }
