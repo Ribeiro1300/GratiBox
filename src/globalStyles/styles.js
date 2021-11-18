@@ -33,10 +33,12 @@ export const PageText = styled.h3`
 `;
 
 export const LoginAndSignupInput = styled.input`
+  font-family: "Roboto", sans-serif;
   width: 90%;
-  height: 5em;
+  height: 70px;
   margin: 5px;
   border-radius: 8px;
+  font-size: 25px;
 
   ::placeholder {
     padding-left: 10px;
@@ -57,6 +59,8 @@ export const LoginAndSignupButton = styled.button`
   border-radius: 8px;
   color: #ffffff;
   margin: 10px 0px;
+  margin-top: 40px;
+  cursor: pointer;
 `;
 
 export const Button = styled.button`
@@ -69,6 +73,7 @@ export const Button = styled.button`
   border-radius: 8px;
   color: #ffffff;
   margin: 10px 0px;
+  cursor: pointer;
 `;
 
 export const Input = styled.input``;

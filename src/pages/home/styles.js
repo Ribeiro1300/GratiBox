@@ -15,5 +15,6 @@ export const HomeImg = styled.div`
 
 export const AlreadySignedIn = styled.h2`
   color: #ffffff;
+  cursor: pointer;
   margin-bottom: 20px;
 `;
