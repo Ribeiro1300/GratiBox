@@ -1,8 +1,10 @@
 import * as G from "../../globalStyles/styles";
 import * as S from "./styles";
 import React from "react";
+import { useHistory } from "react-router-dom";
 
 export default function Home() {
+  const history = useHistory();
   return (
     <G.Content>
       <G.PageTitle>
@@ -13,8 +15,12 @@ export default function Home() {
         mais...
       </G.PageText>
       <S.HomeImg>
-        <G.Button to="/signup">Quero Começar</G.Button>
-        <S.AlreadySignedIn to="/login">Já sou grato</S.AlreadySignedIn>
+        <G.Button onClick={() => history.push("/signup")}>
+          Quero Começar
+        </G.Button>
+        <S.AlreadySignedIn onClick={() => history.push("/login")}>
+          Já sou grato
+        </S.AlreadySignedIn>
       </S.HomeImg>
     </G.Content>
   );

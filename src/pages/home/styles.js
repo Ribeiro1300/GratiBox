@@ -1,4 +1,3 @@
-import { Link } from "react-router-dom";
 import styled from "styled-components";
 
 export const HomeImg = styled.div`
@@ -14,6 +13,7 @@ export const HomeImg = styled.div`
   justify-content: flex-end;
 `;
 
-export const AlreadySignedIn = styled(Link)`
+export const AlreadySignedIn = styled.h2`
   color: #ffffff;
+  margin-bottom: 20px;
 `;

@@ -1,8 +1,6 @@
-import { Link } from "react-router-dom";
 import styled from "styled-components";
 
 export const Content = styled.div`
-  position: absolute;
   width: 100%;
   min-height: 100vh;
   background-color: #6d7ce4;
@@ -20,31 +18,34 @@ export const Content = styled.div`
 `;
 
 export const PageTitle = styled.h2`
-  font-size: 35px;
-  width: 95%;
+  font-size: 33px;
   color: #ffffff;
   font-weight: 600;
+  margin: 20px auto;
 `;
 
 export const PageText = styled.h3`
   width: 90%;
   margin: 20px 0px;
-  font-size: 20px;
+  font-size: 19px;
   color: #ffffff;
   text-align: center;
 `;
 
 export const LoginAndSignupInput = styled.input``;
 
-export const LoginAndSignupButton = styled(Link)``;
+export const LoginAndSignupButton = styled.button``;
 
-export const Button = styled(Link)`
+export const Button = styled.button`
+  font-family: "Roboto", sans-serif;
+  font-size: 18px;
   width: 40%;
-  height: 20px;
+  height: 40px;
   background-color: #6d7ce4;
   border: none;
   border-radius: 8px;
   color: #ffffff;
+  margin: 10px 0px;
 `;
 
 export const Input = styled.input``;
