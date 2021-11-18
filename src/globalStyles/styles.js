@@ -18,16 +18,18 @@ export const Content = styled.div`
 `;
 
 export const PageTitle = styled.h2`
-  font-size: 33px;
+  font-size: 30px;
   color: #ffffff;
   font-weight: 600;
+  margin-top: 30px;
   margin-bottom: 40px;
+  text-align: center;
 `;
 
 export const PageText = styled.h3`
   width: 90%;
   margin: 20px 0px;
-  font-size: 19px;
+  font-size: 18px;
   color: #ffffff;
   text-align: center;
 `;
@@ -65,9 +67,9 @@ export const LoginAndSignupButton = styled.button`
 
 export const Button = styled.button`
   font-family: "Roboto", sans-serif;
-  font-size: 18px;
-  width: 40%;
-  height: 40px;
+  font-size: 23px;
+  width: 50%;
+  height: 50px;
   background-color: #8692e3;
   border: none;
   border-radius: 8px;

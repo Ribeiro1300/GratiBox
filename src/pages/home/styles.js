@@ -1,9 +1,10 @@
 import styled from "styled-components";
+import HomeImage from "../../assets/image05.webp";
 
 export const HomeImg = styled.div`
-  background-image: url("./assets/image05.webp");
+  background-image: url(${HomeImage});
   width: 100%;
-  height: 65vh;
+  flex-grow: 1;
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
