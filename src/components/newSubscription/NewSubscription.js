@@ -34,6 +34,7 @@ export default function NewSubscription() {
 
 function Forms(props) {
   const [page, setPage] = useState("1");
+  const [renderTurn, setRenderTurn] = useState([0, 0, 0]);
   return (
     <>
       {page === "1" ? (
@@ -42,15 +43,18 @@ function Forms(props) {
             <img src={FormsImage} alt="" />
             <S.FormsInfo>
               <h3>Plano</h3>
-              <AiOutlineArrowDown />
+              <AiOutlineArrowDown onClick={() => setRenderTurn([1, 0, 0])} />
+              {renderTurn[0] === 1 ? <div>oi</div> : null}
             </S.FormsInfo>
             <S.FormsInfo>
               <h3>Entrega</h3>
-              <AiOutlineArrowDown />
+              <AiOutlineArrowDown onClick={() => setRenderTurn([0, 1, 0])} />
+              {renderTurn[1] === 1 ? <div>oi</div> : null}
             </S.FormsInfo>
             <S.FormsInfo>
               <h3>Quero receber</h3>
-              <AiOutlineArrowDown />
+              <AiOutlineArrowDown onClick={() => setRenderTurn([0, 0, 1])} />
+              {renderTurn[2] === 1 ? <div>oi</div> : null}
             </S.FormsInfo>
           </S.Form>
 

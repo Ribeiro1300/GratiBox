@@ -19,7 +19,7 @@ export default function Subscription() {
   return (
     <G.Content>
       <G.PageTitle>Bom te ver por aqui, {"@fulaninhoDeTal"}</G.PageTitle>
-      {userId == "2" ? (
+      {userId === "2" ? (
         <>
           <G.PageText>"Agradecer é arte de atrair coisas boas"</G.PageText>
           <SubsInfo userInfo={mockUser}></SubsInfo>

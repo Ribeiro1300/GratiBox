@@ -15,6 +15,10 @@ export const Content = styled.div`
   a {
     text-decoration: none;
   }
+
+  form {
+    text-align: center;
+  }
 `;
 
 export const PageTitle = styled.h2`
