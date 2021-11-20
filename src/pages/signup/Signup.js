@@ -16,7 +16,13 @@ export default function Signup() {
       alert("Senhas diferentes! Tente novamente");
       return;
     }
-    handleSignup({ name, email, password });
+    const result = handleSignup({ name, email, password });
+    result
+      .then((res) => {
+        alert("Usuário criado com sucesso!");
+        history.push("/login");
+      })
+      .catch((err) => {});
   }
   return (
     <G.Content>

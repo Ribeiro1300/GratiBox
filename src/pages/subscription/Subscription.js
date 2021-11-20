@@ -9,21 +9,27 @@ import React from "react";
 export default function Subscription() {
   const { userId } = useParams();
   const mockUser = {
-    id: userId,
-    name: "Jhonatan",
-    plan: "weekly",
-    signupDate: "10/10/2010",
-    nextDeliveries: ["17/10/2010", "24/10/2010", "5/11/2010"],
-    package: "Chás",
+    id: 1,
+    user_id: userId,
+    type: "weekly",
+    signup_date: "10/10/2010",
+    delivery_dates: "17/10/2010, 24/10/2010, 5/11/2010",
+    product: "Chás",
   };
   return (
     <G.Content>
-      <G.PageTitle>Bom te ver por aqui, {"@fulaninhoDeTal"}</G.PageTitle>
-      {userId === "2" ? (
+      <G.PageTitle>
+        Bom te ver por aqui, {localStorage.getItem("name")}
+      </G.PageTitle>
+      {userId === "6" ? (
         <>
           <G.PageText>"Agradecer é arte de atrair coisas boas"</G.PageText>
           <SubsInfo userInfo={mockUser}></SubsInfo>
-          <G.Button>Avaliar Entregas</G.Button>
+          <G.Button
+            onClick={() => alert("essa função será habilitada em breve")}
+          >
+            Avaliar Entregas
+          </G.Button>
         </>
       ) : (
         <>

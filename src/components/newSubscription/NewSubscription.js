@@ -1,9 +1,10 @@
 /* eslint-disable react/prop-types */
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import * as G from "../../globalStyles/styles";
 import * as S from "./styles";
 import FormsImage from "../../assets/image03.jpg";
 import { AiOutlineArrowDown } from "react-icons/ai";
+import cep from "cep-promise";
 
 export default function NewSubscription() {
   const [newPlan, setNewPlan] = useState("");
@@ -71,10 +72,19 @@ function Address(props) {
   const { newPlan, setNewPlan } = props.plan;
   const [name, setName] = useState("");
   const [deliveryAddress, setDeliveryAddress] = useState("");
-  const [cep, setCep] = useState("");
+  const [cepN, setCepN] = useState("");
   const [city, setCity] = useState("");
   const [state, setState] = useState("");
   console.log(newPlan, setNewPlan);
+
+  if (cepN.length === 8) {
+    console.log(cepN);
+    cep(cepN).then((res) => {
+      setCity(res.city);
+      setDeliveryAddress(res.street);
+      setState(res.state);
+    });
+  }
   return (
     <>
       <S.Form>
@@ -93,9 +103,11 @@ function Address(props) {
         ></S.FormsInput>
         <S.FormsInput
           type="text"
-          onChange={(elem) => setCep(elem.target.value)}
-          value={cep}
+          onChange={(elem) => setCepN(elem.target.value)}
+          value={cepN}
           placeholder="CEP"
+          pattern="[0-9]{8}"
+          maxLength="8"
         ></S.FormsInput>
         <S.FormsInput
           type="text"

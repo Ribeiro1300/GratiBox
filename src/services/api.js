@@ -17,8 +17,12 @@ function handleLogin({ email, password }) {
 
 function handleSignup({ name, email, password }) {
   const body = { name, email, password };
-  console.log(body);
   const result = API.post("/signup", body);
+  return result;
+}
+
+function getPlans(token) {
+  const result = API.post("/plans", createHeaders(token));
   return result;
 }
 export { handleLogin, handleSignup };

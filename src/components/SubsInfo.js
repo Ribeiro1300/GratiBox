@@ -5,22 +5,24 @@ import SubsImage from "../assets/image03.jpg";
 
 export default function SubsInfo(props) {
   const { userInfo } = props;
+  const deliveryDates = userInfo.delivery_dates.split(",");
+  console.log(deliveryDates);
   return (
     <InfoWrapper>
       <img src={SubsImage} alt="" />
       <h3>
-        Plano:<span>{userInfo.plan}</span>
+        Plano:<span>{userInfo.type}</span>
       </h3>
       <h3>
-        Data de Assinatura:<span>{userInfo.signupDate}</span>
+        Data de Assinatura:<span>{userInfo.signup_date}</span>
       </h3>
       <h3>
         Próximas entregas:
-        <p>{userInfo.nextDeliveries[0]}</p>
-        <p>{userInfo.nextDeliveries[1]}</p>
-        <p>{userInfo.nextDeliveries[2]}</p>
+        <p>{deliveryDates[0]}</p>
+        <p>{deliveryDates[1]}</p>
+        <p>{deliveryDates[2]}</p>
       </h3>
-      <h4>{userInfo.package}</h4>
+      <h4>{userInfo.product}</h4>
     </InfoWrapper>
   );
 }
