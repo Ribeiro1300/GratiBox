@@ -15,7 +15,6 @@ export default function Login() {
     const loginStatus = handleLogin({ email, password });
     loginStatus
       .then((res) => {
-        console.log(res);
         localStorage.setItem("token", res.data.token);
         localStorage.setItem("name", res.data.user.name);
         history.push("/subscription/" + res.data.user.id);

@@ -27,7 +27,7 @@ export const PlanText = styled.h2`
   margin-left: 20px;
 `;
 
-export const Form = styled.div`
+export const Form = styled.form`
   width: 90%;
   background-color: #ffffff;
   border-radius: 8px;
@@ -43,10 +43,10 @@ export const Form = styled.div`
 
 export const FormsInfo = styled.div`
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-between;
   align-items: center;
   width: 85%;
-  height: 50px;
   background-color: #e0d1ed;
   border-radius: 8px;
   margin: 8px;
@@ -62,6 +62,22 @@ export const FormsInfo = styled.div`
     font-size: 35px;
     margin: 8px;
   }
+  div {
+    width: 100%;
+  }
+`;
+
+export const ToggleForms = styled.div`
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 85%;
+  height: 50px;
+  background-color: #e0d1ed;
+  border-radius: 8px;
+  color: #5768de;
+  font-weight: 700;
+  font-size: 20px;
 `;
 
 export const FormsInput = styled.input`

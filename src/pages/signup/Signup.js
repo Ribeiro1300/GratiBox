@@ -12,7 +12,7 @@ export default function Signup() {
 
   function signupUser(e) {
     e.preventDefault();
-    if (password != checkPass) {
+    if (password !== checkPass) {
       alert("Senhas diferentes! Tente novamente");
       return;
     }
