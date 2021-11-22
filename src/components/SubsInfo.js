@@ -6,7 +6,6 @@ import SubsImage from "../assets/image03.jpg";
 export default function SubsInfo(props) {
   const { userInfo } = props;
   const deliveryDates = userInfo.delivery_dates.split(",");
-  console.log(deliveryDates);
   return (
     <InfoWrapper>
       <img src={SubsImage} alt="" />

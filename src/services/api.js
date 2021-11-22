@@ -4,8 +4,10 @@ const API = axios.create({
   baseURL: process.env.REACT_APP_BASE_URL,
 });
 
-function createHeaders(token) {
-  const config = { headers: { Authorization: `Bearer ${token}` } };
+function createHeaders() {
+  const config = {
+    headers: { Authorization: `Bearer ${localStorage.getItem("token")}` },
+  };
   return config;
 }
 
@@ -21,8 +23,14 @@ function handleSignup({ name, email, password }) {
   return result;
 }
 
-function getPlans(token) {
-  const result = API.post("/plans", createHeaders(token));
+function getPlans(user_id) {
+  const body = { user_id: user_id };
+  const result = API.post("/plans", body, createHeaders());
   return result;
 }
-export { handleLogin, handleSignup };
+
+function postNewPlan(body) {
+  const result = API.post("/newPlan", body, createHeaders());
+  return result;
+}
+export { handleLogin, handleSignup, getPlans, postNewPlan };

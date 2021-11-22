@@ -27,7 +27,7 @@ export const PlanText = styled.h2`
   margin-left: 20px;
 `;
 
-export const Form = styled.div`
+export const Form = styled.form`
   width: 90%;
   background-color: #ffffff;
   border-radius: 8px;
