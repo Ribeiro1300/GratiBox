@@ -20,13 +20,7 @@ export default function Login() {
         history.push("/subscription/" + res.data.user.id);
       })
       .catch((err) => {
-        console.log(err);
-        if (err.status === 409) {
-          alert("Usuário não encontrado!");
-          return;
-        }
-        if (err.status === 401) {
-        }
+        alert("Usuário não encontrado!");
       });
   }
   return (

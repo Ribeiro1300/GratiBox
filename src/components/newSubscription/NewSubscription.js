@@ -49,7 +49,6 @@ function Forms(props) {
     }
     setPage("2");
   }
-  console.log(delivery);
   return (
     <>
       {page === "1" ? (
