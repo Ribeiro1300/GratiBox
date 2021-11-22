@@ -33,4 +33,10 @@ function postNewPlan(body) {
   const result = API.post("/newPlan", body, createHeaders());
   return result;
 }
-export { handleLogin, handleSignup, getPlans, postNewPlan };
+
+function deleteSession() {
+  const body = { token: localStorage.getItem("token") };
+  const result = API.post("/deleteSession", body, createHeaders());
+  return result;
+}
+export { handleLogin, handleSignup, getPlans, postNewPlan, deleteSession };

@@ -64,20 +64,10 @@ export const FormsInfo = styled.div`
   }
   div {
     width: 100%;
+    height: 45px;
+    display: flex;
+    justify-content: space-around;
   }
-`;
-
-export const ToggleForms = styled.div`
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  width: 85%;
-  height: 50px;
-  background-color: #e0d1ed;
-  border-radius: 8px;
-  color: #5768de;
-  font-weight: 700;
-  font-size: 20px;
 `;
 
 export const FormsInput = styled.input`

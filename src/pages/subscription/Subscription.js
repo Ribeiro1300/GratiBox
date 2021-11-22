@@ -3,9 +3,10 @@
 import { useHistory, useParams } from "react-router-dom";
 import * as G from "../../globalStyles/styles";
 import SubsInfo from "../../components/SubsInfo";
-import { getPlans } from "../../services/api.js";
+import { getPlans, deleteSession } from "../../services/api.js";
 import NewSubscription from "../../components/newSubscription/NewSubscription";
 import React, { useEffect, useState } from "react";
+import { Alert } from "bootstrap";
 
 export default function Subscription() {
   const { userId } = useParams();
@@ -26,11 +27,35 @@ export default function Subscription() {
         .catch((err) => console.log(err));
     } catch (error) {}
   }, []);
+  function logout() {
+    try {
+      const result = deleteSession();
+      result.then((res) => alert("Logout feito com sucesso!"));
+    } catch (error) {
+      if (error.request.status == 409) {
+        alert("Falha ao fazer logout");
+      }
+    }
+    localStorage.removeItem("token");
+    history.push("/");
+  }
+
   return (
     <G.Content>
+      <ion-icon
+        onClick={logout}
+        style={{
+          fontSize: "30px",
+          alignSelf: "flex-end",
+          marginRight: "20px",
+          color: "white",
+        }}
+        name="exit-outline"
+      ></ion-icon>
       <G.PageTitle>
         Bom te ver por aqui, {localStorage.getItem("name")}
       </G.PageTitle>
+
       {usersPlan.length === 0 ? (
         <>
           <G.PageText>
